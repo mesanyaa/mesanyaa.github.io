@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="icons/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="icons/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="icons/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="icons/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="icons/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="icons/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="icons/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="icons/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icons/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="icons/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="icons/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="icons/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Форма регистрации</title>
+  </head>
+  <body style="background: #b85339">
+    <!-- Основная секция -->
+    <section class="sign-up-section">
+      <div class="container sign-up-section__container">
+        <div class="sign-up-section__right-wrapper">
+          <img
+            class="right-wrapper__img"
+            src="img/sign-up-background.png"
+            alt=""
+          />
+        </div>
+        <div class="sign-up-section__left-wrapper">
+          <p><span>Регистрация</span></p>
+          <input type="text" placeholder="Имя" required id="name" />
+          <input type="text" placeholder="Фамилия" required id="surname" />
+          <input
+            type="email"
+            placeholder="Адрес электронной почты"
+            required
+            id="email"
+          />
+          <input type="password" placeholder="Пароль" required id="password" />
+          <input
+            type="password"
+            placeholder="Повторите пароль"
+            required
+            id="password_2"
+          />
+          <button onclick="checkPassword()">Зарегистрироваться</button>
+          <p>Уже есть аккаунт?</p>
+          <button onclick="logIn()">Войти</button>
+        </div>
+      </div>
+    </section>
+    <!-- Подвал -->
+    <footer class="footer">
+      <div class="footer__footer-background"></div>
+      <div class="container footer__container">
+        <!-- Логотип -->
+        <div class="footer__logo footer__item">
+          <div class="footer__logo-line"></div>
+          <h5>PERFUME</h5>
+          <div class="footer__logo-line"></div>
+        </div>
+        <!-- Контакты -->
+        <div class="footer__contacts footer__item">
+          <p>Связаться с нами</p>
+          <a href="mailto:support@gmal.com">support@gmal.com</a> <br />
+          <a href="tel:+7 (777) 777-77-77">+7 (777) 777-77-77</a>
+        </div>
+        <!-- Соц-сети -->
+        <div class="footer__socials footer__item">
+          <p>Подписывайтесь на нас</p>
+          <div class="footer__icons-box">
+            <div class="icons-box__item">
+              <a href="https://github.com/mesanyaa"><img src="icons/tiktok.svg" alt="" /></a>
+            </div>
+            <div class="icons-box__item">
+              <a href="https://t.me/mesanyaa"><img src="icons/insta.svg" alt="" /></a>
+            </div>
+            <div class="icons-box__item">
+              <a href="https://vk.com/yakovchuk_alexsandra"><img src="icons/vk.svg" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="container group-and-fio" style="color: #E9EBE8">
+      Яковчук Александра Вячеславовна ИКБО-16-22
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

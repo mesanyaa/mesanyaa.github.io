@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="icons/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="icons/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="icons/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="icons/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="icons/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="icons/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="icons/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="icons/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icons/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="icons/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="icons/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="icons/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Каталог</title>
+  </head>
+  <body>
+    <section class="catalog-main-section">
+      <div class="main-section__nav-background"></div>
+      <!-- Навигационное меню -->
+      <div
+        class="container main-section__nav-container catalog-main-section__nav-container"
+      >
+        <header class="main-section__header logotype">
+          <hr />
+          <h1><a href="index.html">PERFUME</a></h1>
+          <hr />
+        </header>
+        <nav class="main-section__nav nav-menu">
+          <ul class="nav-menu__list">
+            <li class="nav-menu__list-item">
+              <a href="cart.html"
+                ><img src="icons/cart.svg" alt="" />
+                <p>Корзина</p></a
+              >
+            </li>
+            <li class="nav-menu__list-item">
+              <a href="wishlist.html"
+                ><img src="icons/wishlist.svg" alt="" />
+                <p>Избранное</p></a
+              >
+            </li>
+            <li class="nav-menu__list-item">
+              <a href="catalog.html"
+                ><img src="icons/personal-account.svg" alt="" />
+                <p>
+                  Каталог
+                  <!-- Личный <br />
+                  кабинет -->
+                </p></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Кнопка поиска -->
+      <div class="container main-section__search-form-container">
+        <input
+          type="text"
+          id="pageInput"
+          placeholder=" Поиск в каталоге товаров"
+        />
+        <button onclick="redirectToPage()">
+          <img src="icons/search.svg" alt="" />
+        </button>
+      </div>
+      <!-- Изображение -->
+      <div class="catalog-main-section__img-box">
+        <img
+          src="img/catalog-img.png"
+          alt=""
+          class="catalog-main-section__img"
+        />
+      </div>
+    </section>
+    <section class="categories-section">
+      <div class="container categories-section__container">
+        <div class="categories-section__left-wrapper">
+          <h2 class="categories-section__title">Категории</h2>
+          <div class="categories-section__button-box">
+            <button class="categories-section__button" id="showAll">
+              Показать все
+            </button>
+            <button class="categories-section__button" id="showLight">
+              Лёгкие ароматы
+            </button>
+            <button class="categories-section__button" id="showPersistent">
+              Стойкие ароматы
+            </button>
+            <button class="categories-section__button" id="showMasculine">
+              Мужские ароматы
+            </button>
+          </div>
+        </div>
+        <div class="categories-section__right-wrapper">
+          <div class="categories-section__selected-category-box">
+            <p>Выбранная категория</p>
+            <p id="selectedCategory">Не выбрана</p>
+          </div>
+          <div class="categories-section__products-box">
+            <a
+              href="card-reference.html"
+              class="categories-section__products-item light"
+            >
+              <img src="img/catalog-1.png" alt="" />
+              <p>
+                Летняя Сирень<br />
+                <span>4999 руб.</span>
+              </p>
+            </a>
+            <a
+              href="card-reference-2.html"
+              class="categories-section__products-item masculine"
+            >
+              <img src="img/catalog-2.png" alt="" />
+              <p>
+                Мужество Джентльмена<br />
+                <span>4999 руб.</span>
+              </p>
+            </a>
+            <a
+              href="card-reference-3.html"
+              class="categories-section__products-item persistent"
+            >
+              <img src="img/catalog-3.png" alt="" />
+              <p>Магия Востока<br /><span>4999 руб.</span></p>
+            </a>
+            <a
+              href="card-reference-4.html"
+              class="categories-section__products-item persistent"
+            >
+              <img src="img/catalog-4.png" alt="" />
+              <p>Весеннее вдохновение<br /><span>4999 руб.</span></p>
+            </a>
+            <a
+              href="card-reference-5.html"
+              class="categories-section__products-item light"
+            >
+              <img src="img/catalog-5.png" alt="" />
+              <p>Фруктовая Гармония<br /><span>4999 руб.</span></p>
+            </a>
+            <a
+              href="card-reference-6.html"
+              class="categories-section__products-item masculine"
+            >
+              <img src="img/catalog-6.png" alt="" />
+              <p>Древесная энергия<br /><span>4999 руб.</span></p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Подвал -->
+    <footer class="footer">
+      <div class="footer__footer-background"></div>
+      <div class="container footer__container">
+        <!-- Логотип -->
+        <div class="footer__logo footer__item">
+          <div class="footer__logo-line"></div>
+          <h5>PERFUME</h5>
+          <div class="footer__logo-line"></div>
+        </div>
+        <!-- Контакты -->
+        <div class="footer__contacts footer__item">
+          <p>Связаться с нами</p>
+          <a href="mailto:support@gmal.com">support@gmal.com</a> <br />
+          <a href="tel:+7 (777) 777-77-77">+7 (777) 777-77-77</a>
+        </div>
+        <!-- Соц-сети -->
+        <div class="footer__socials footer__item">
+          <p>Подписывайтесь на нас</p>
+          <div class="footer__icons-box">
+            <div class="icons-box__item">
+              <a href="https://github.com/mesanyaa"><img src="icons/tiktok.svg" alt="" /></a>
+            </div>
+            <div class="icons-box__item">
+              <a href="https://t.me/mesanyaa"><img src="icons/insta.svg" alt="" /></a>
+            </div>
+            <div class="icons-box__item">
+              <a href="https://vk.com/yakovchuk_alexsandra"><img src="icons/vk.svg" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="container group-and-fio">
+      Яковчук Александра Вячеславовна ИКБО-16-22
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
