@@ -1,0 +1,1303 @@
+@import "resets.scss"
+@import "normalizez.scss"
+@import url("https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+
+@font-face
+    font-family: "Montserrat"
+    src: url('../fonts/Montserrat-Regular.ttf')
+    font-weight: regular
+    font-style: normal
+
+@font-face
+    font-family: "Montserrat"
+    src: url('../fonts/Montserrat-SemiBold.ttf')
+    font-weight: bold
+    font-style: normal
+
+$color-orange: #B85339
+$color-black: #3F3B38
+$color-white: #E9EBE8
+$color-yellow: #D8AF6D
+
+*
+    box-sizing: border-box
+    color: $color-black
+
+html
+    font-family: "Montserrat"
+    font-weight: regular
+
+a
+    text-decoration: none
+
+.line
+    height: 1px
+    width: 35px
+    background: $color-black
+    margin: 0
+
+.container
+    position: relative
+    max-width: 1140px
+    margin: 0 auto
+
+.main-section
+    min-height: 800px
+    position: relative
+    &__nav-background
+        position: absolute
+        width: 100%
+        height: 120px
+        background: $color-orange
+    &__nav-container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        height: 120px
+        margin-bottom: 6px
+    &__header
+        h1
+            color: $color-white
+            margin: 10px 0 10px 0
+            font-size: 40px
+            font-weight: bold
+            a
+                color: $color-white
+                cursor: pointer
+    &__content-container
+        position: relative
+        margin-bottom: 7px
+    &__text-box
+        position: absolute
+        top: 135px
+        left: 97px
+    &__title
+        font-size: 32px
+        font-weight: bold
+        margin-bottom: 5px
+        &-line
+            margin-bottom: 45px
+    &__text
+        width: 385px
+        font-size: 16px
+    &__background
+        width: 100%
+        height: 56%
+    &__search-form-container
+        display: flex
+        justify-content: center
+        input
+            width: 50%
+            background-color: #E9EBE8
+            border-radius: 4px 0 0 4px
+            border: solid 1px $color-black
+            border-right: none
+            padding-left: 30px
+        input:focus
+            outline: none
+        button
+            cursor: pointer
+            border-radius: 0 4px 4px 0
+            border: solid 1px $color-black
+
+.nav-menu
+    &__list
+        display: flex
+        flex-direction: row
+        &-item
+            // margin-right: 52px
+            transition: 0.3s ease-in-out
+            a
+                position: relative
+                width: 85px
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                p
+                    color: $color-white
+                    position: absolute
+                    top: 46px
+                    opacity: 0
+                    transition: opacity 0.3s ease-in-out
+        &-item:hover
+            transform: scale(1.1)
+            transform: translateY(-10px)
+            a
+                p
+                    opacity: 1
+        &-item:last-child
+            margin-right: 0
+
+.second-section
+    min-height: 800px
+    margin-bottom: 50px
+    &__text
+        width: 100%
+        height: 200px
+        background: $color-orange
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 15px
+        p
+            color: $color-white
+            font-size: 24px
+            display: inline-block
+            text-align: center
+            margin: 0 97px
+    &__cards-box
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+    &__cards-item
+        display: flex
+        flex-direction: column
+        justify-content: center
+        border-radius: 4px
+        overflow: hidden
+        img
+            margin-bottom: 15px
+            transition: 0.7s ease-in-out
+        img:hover
+            transform: translateY(25%)
+        p
+            font-size: 24px
+            text-align: center
+            background-color: #fff
+            z-index: 1
+            padding-bottom: 10px
+            span
+                font-weight: bold
+
+.cards-item
+    position: relative
+    &__hidden-description
+        display: table-cell
+        vertical-align: bottom
+        width: 75%px
+        height: 200px
+        position: absolute
+        top: 0
+        z-index: -1
+        background: $color-yellow
+        font-size: 16px
+        font-weight: bold
+        color: $color-white
+        text-align: center
+        padding: 15px 10px 0 10px
+
+.third-section
+    min-height: 700px
+    &__container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+    &__right-wrapper
+        position: relative
+        width: 653px
+        height: 645px
+        background: $color-orange
+    &__text-box
+        position: absolute
+        top: 160px
+        left: 100px
+    &__title
+        font-size: 32px
+        font-weight: bold
+        color: $color-white
+        margin-bottom: 5px
+        &-line
+            background: $color-white
+            margin-bottom: 45px
+    &__text
+        color: $color-white
+        width: 385px
+
+.fourth-section
+    min-height: 300px
+    &__text-box
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 240px
+        background: #D9D9D9
+    &__title
+        font-size: 32px
+        font-weight: bold
+        margin-bottom: 20px
+    &__text
+        font-size: 24px
+        text-align: center
+        margin: 0 97px 20px 97px
+    &__button
+        border: none
+        cursor: pointer
+        background-color: $color-yellow
+        padding: 15px
+        border-radius: 4px
+        font-weight: bold
+        color: $color-white
+        transition: 0.5s ease-in-out
+    &__button:hover
+        transform: scale(1.1)
+
+.footer
+    position: relative
+    &__container
+        height: 245px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        // padding: 0 15px 0 15px
+    &__item
+        /* display: flex
+        /*flex-direction: column
+        /*justify-content: flex-start */
+        height: 120px
+    &__footer-background
+        position: absolute
+        width: 100%
+        height: 245px
+        background: $color-orange
+    &__logo
+        h5
+            text-align: center
+            color: $color-white
+            font-size: 40px
+            font-weight: bold
+            margin: 10px 0 10px 0
+    &__logo-line
+        width: 207px
+        height: 1px
+        background: $color-white
+    &__contacts
+        color: $color-white
+        font-size: 24px
+        line-height: 30px
+        p
+            color: $color-white
+            font-weight: bold
+            margin-bottom: 20px
+        a
+            color: $color-white
+            text-decoration: none
+    &__socials
+        line-height: 30px
+        p
+            color: $color-white
+            font-size: 24px
+            font-weight: bold
+            margin-bottom: 20px
+    &__icons-box
+        display: flex
+        flex-direction: row
+        justify-content: center
+
+.icons-box
+    &__item
+        margin-right: 20px
+        transition: 0.3s ease-in-out
+    &__item:hover
+        transform: scale(1.1)
+    &__item:last-child
+        margin-right: 0
+
+.sign-up-section
+    background: $color-yellow
+    &__container
+        display: flex
+        padding: 5vh 0 5vh 0
+    &__right-wrapper
+        width: 50%
+    &__left-wrapper
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        background: #E9EBE8
+        border-radius: 0 4px 4px 0
+        width: 50%
+        p
+            margin-bottom: 13px
+            font-size: 24px
+            span
+                display: block
+                font-size: 32px
+                font-weight: bold
+                margin-bottom: 28px
+        input
+            width: 70%
+            background: none
+            border: solid 1px $color-black
+            padding: 10px 15px 10px 15px
+            margin-bottom: 28px
+        input:focus
+            outline: none
+        button
+            cursor: pointer
+            width: fit-content
+            border: none
+            border-radius: 4px
+            background: $color-orange
+            color: $color-white
+            padding: 10px 30px 10px 30px
+            margin-bottom: 24px
+            transition: 0.5s ease-in-out
+        button:last-child
+            background: $color-yellow
+            margin-bottom: 0
+        button:hover
+            transform: scale(1.1)
+
+.right-wrapper
+    &__img
+        height: 100%
+        width: 100%
+        border-radius: 4px 0 0 4px
+
+.product-card
+    &__container
+        margin-top: 15px
+        margin-bottom: 30px
+        min-height: 800px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+    &__right-wrapper
+        width: 47%
+        border-radius: 4px
+    &__left-wrapper
+        width: 50%
+        background: $color-yellow
+        border-radius: 4px
+    &__text-box
+        margin: 50px 80px 0 80px
+    &__img
+        width: 100%
+    &__header
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        margin-bottom: 20px
+    &__name
+        font-size: 24px
+        font-weight: bold
+    &__volume
+        font-size: 14px
+    &__price
+        font-weight: bold
+        color: $color-orange
+        font-size: 20px
+        span
+            text-decoration: line-through
+            font-size: 16px
+            font-weight: 400
+            color: $color-black
+    &__description
+        width: 67%
+        margin-bottom: 20px
+    &__chose-volume
+        margin-bottom: 30px
+        input[type='radio']
+            accent-color: $color-black
+        label
+            font-size: 14px
+            font-weight: bold
+    &__buttons
+        button
+            border: none
+            border-radius: 4px
+            padding: 15px 10px
+            font-size: 14px
+            font-weight: bold
+            transition: 0.5s ease-in-out
+        button:hover
+            cursor: pointer
+            transform: scale(1.1)
+        &--orange
+            color: $color-white
+            background: $color-orange
+            margin-right: 15px
+
+.spoiler_wrap
+    border-bottom: 1px solid $color-black
+    margin-bottom: 15px
+    &.active .spoiler_content
+        max-height: 500px !important
+        padding-bottom: 25px
+        transition: max-height 0.5s ease, padding-bottom 0.3s ease
+    &.active .spoiler_title
+        color: $color-orange
+        font-weight: bold
+        transition: color 0.5s ease-in-out
+
+.spoiler_content
+    color: $color-black
+    line-height: 24px
+    max-height: 0
+    overflow: hidden
+    transition: max-height 0.5s ease, padding-bottom 0.3s ease
+
+.plus-minus-toggle
+    cursor: pointer
+    height: 21px
+    position: absolute
+    width: 21px
+    left: -40px
+    top: 50%
+    z-index: 2
+
+.plus-minus-toggle:before,
+.plus-minus-toggle:after
+    background: $color-black
+    content: ''
+    height: 1px
+    left: 0
+    position: absolute
+    top: 0
+    width: 18px
+    transition: transform 500ms ease
+
+.plus-minus-toggle:after
+    transform-origin: center
+
+.plus-minus-toggle.collapsed:after
+    transform: rotate(90deg)
+
+.plus-minus-toggle.collapsed:before
+    transform: rotate(180deg)
+
+.spoiler_title
+    color: $color-black
+    position: relative
+    cursor: pointer
+    padding: 20px 0
+    transition: color 0.5s ease
+
+.another-products
+    &__container
+        min-height: 800px
+    &__text-box
+        height: 90px
+        line-height: 90px
+        background: $color-orange
+        font-size: 24px
+        color: $color-white
+        text-align: center
+        margin-bottom: 60px
+
+.slidecontainer
+    width: 1080px
+    margin: 0 auto
+    position: relative
+
+.slide
+    // margin: 0 10px
+    text-align: center
+
+.slide img
+    width: auto
+    height: 500px
+    margin-bottom: 15px
+
+.slide p
+    font-size: 24px
+
+.slick-prev
+    left: -40px
+    right: auto
+
+.slick-next
+    right: -40px
+    left: auto
+
+.slick-prev,
+.slick-next
+    background-color: transparent
+    font-size: 0
+    line-height: 0
+    position: absolute
+    top: 50%
+    display: block
+    width: 15px
+    height: 15px
+    padding: 0
+    -webkit-transform: translate(0, -50%)
+    -ms-transform: translate(0, -50%)
+    transform: translate(0, -50%)
+    cursor: pointer
+    color: transparent
+    border: none
+    outline: none
+
+.slick-prev
+    border-top: 2px solid #585858
+    border-left: 2px solid #585858
+    position: absolute
+    top: 50%
+    transform: rotate(-45deg) translateY(-50%)
+
+.slick-next
+    border-bottom: 2px solid #585858
+    border-right: 2px solid #585858
+    transform: rotate(-45deg)
+    position: absolute
+    top: 50%
+    transform: rotate(-45deg) translate(5px, calc(-50% + 5px))
+
+.slick-prev:before,
+.slick-next:before
+    content: ""
+
+.slick-list
+    position: relative
+    display: block
+    overflow: hidden
+
+.slick-list.draggable
+    cursor: pointer
+    cursor: hand
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+    -webkit-transform: translate3d(0, 0, 0)
+    -moz-transform: translate3d(0, 0, 0)
+    -ms-transform: translate3d(0, 0, 0)
+    -o-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+.slick-track
+    position: relative
+    top: 0
+    left: 0
+    display: block
+    margin-left: auto
+    margin-right: auto
+
+.slick-track:before,
+.slick-track:after
+    display: table
+    content: ""
+
+.slick-track:after
+    clear: both
+
+.slick-loading .slick-track
+    visibility: hidden
+
+.slick-slide
+    display: none
+    float: left
+    height: 100%
+    min-height: 1px
+
+.slick-slide img
+    display: block
+
+.slick-slide.slick-loading img
+    display: none
+
+.slick-slide.dragging img
+    pointer-events: none
+
+.slick-initialized .slick-slide
+    display: block
+
+.slick-loading .slick-slide
+    visibility: hidden
+
+.slick-vertical .slick-slide
+    display: block
+    height: auto
+    border: 1px solid transparent
+
+.slick-arrow.slick-hidden
+    display: none
+
+.catalog-main-section
+    min-height: 730px
+    &__nav-container
+        margin-bottom: 50px
+    &__img-box
+        margin: 50px 0 0 0
+        background: $color-yellow
+    &__img
+        display: block
+        margin: 0 auto
+
+.categories-section
+    // min-height: 600px
+    margin-bottom: 10px
+    &__container
+        display: flex
+        justify-content: space-between
+    &__left-wrapper
+        text-align: center
+        width: 33%
+    &__title
+        color: $color-orange
+        font-size: 36px
+        font-weight: bold
+        margin: 0 0 35px 0
+    &__button-box
+        display: flex
+        flex-direction: column
+        justify-content: center
+        // align-items: center
+    &__button
+        cursor: pointer
+        border: none
+        border-top: 1px solid $color-black
+        background: transparent
+        font-size: 24px
+        padding: 10px 0 10px 0
+        transition: 0.5s ease-in-out
+    &__button:hover
+        transform: scale(1.05)
+    &__button:last-child
+        border-bottom: 1px solid $color-black
+    &__selected-category-box
+        display: flex
+        justify-content: space-between
+        margin-bottom: 35px
+        p
+            font-size: 28px
+            margin: 0 30px 0 30px
+            transition: opacity 0.5s ease-in-out
+        p:last-child
+            color: $color-yellow
+    &__right-wrapper
+        width: 65%
+    &__products-box
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+    &__products-item
+        // display: none;
+        width: 50%
+        text-align: center
+        margin-bottom: 30px
+        img
+            width: 98%
+            margin-bottom: 15px
+        p
+            font-size: 24px
+            font-weight: bold
+            span
+                color: $color-orange
+
+.products-section
+    min-height: 400px
+    &__container
+        margin-top: 20px
+    &__header
+        display: flex
+        justify-content: space-between
+        margin-bottom: 20px
+    &__title
+        font-size: 48px
+    &__number-and-total
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__number
+        font-size: 24px
+        margin-right: 60px
+    &__number-in-wish
+        font-size: 24px
+    &__total
+        color: $color-orange
+        font-size: 24px
+        span
+            color: $color-orange
+    &__line
+        width: 100%
+        height: 1px
+        background: $color-black
+        margin-bottom: 20px
+
+.products-container
+    font-size: 24px
+    span
+        font-size: 24px
+    ion-icon
+        cursor: pointer
+        font-size: 32px
+        transition: 0.5s ease-in-out
+        ion-icon: hover
+        transform: scale(1.05)
+    ion-icon[name="remove-circle-outline"]
+        margin-right: 10px
+    .quantity
+        span
+            font-size: 24px
+            margin-right: 10px
+.product
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 20px
+.product-name
+    width: 200px
+.quantity
+    display: flex
+    align-items: center
+    justify-content: space-between
+.total
+    color: $color-orange
+.to-order-button
+    border: none
+    cursor: pointer
+    background: $color-yellow
+    color: $color-white
+    padding: 10px
+    border-radius: 4px
+    font-size: 24px
+    float: right
+    transition: 0.5s ease-in-out
+.to-order-button:hover
+    transform: scale(1.1)
+
+.group-and-fio
+    width: fit-content
+    margin: 0 auto
+    font-size: 32px
+    font-weight: bold
+    color: $color-orange
+    text-align: center
+
+@media (max-width: 1199px)
+    .container
+        max-width: 960px
+    .main-section
+        min-height: 700px
+    .second-section
+        min-height: 700px
+        margin-bottom: 15px
+    .third-section
+        min-height: 600px
+        margin-bottom: 15px
+        &__text-box
+            left: 65px
+    .fourth-section
+        min-height: 245px
+        margin-bottom: 15px
+    .sign-up-section
+        &__left-wrapper
+            p
+                margin-bottom: 10px
+                span
+                    margin-bottom: 10px
+    .product-card
+        &__text-box
+            margin: 30px 50px 0 50px
+        &__chose-volume
+            margin-bottom: 15px
+        &__buttons
+            button
+                padding: 10px
+                font-size: 12px
+    .plus-minus-toggle
+        left: -33px
+    .another-products
+        &__container
+            min-height: 700px
+    .slidecontainer
+        width: 885px
+    .slick-slide
+        img
+            height: auto
+            width: 295px
+            margin-bottom: 10px
+        p
+            font-size: 20px
+    .categories-section
+        &__products-item
+            margin-bottom: 20px
+            p
+                font-size: 20px
+    .products-section
+        &__title
+            font-size: 32px
+
+@media (max-width: 991px)
+    .container
+        max-width: 720px
+    .main-section
+        min-height: 575px
+        &__text-box
+            top: 55px
+            left: 55px
+    .second-section
+        min-height: 575px
+        &__text
+            height: 150px
+            p
+                font-size: 18px
+        &__cards-item
+            p
+                font-size: 16px
+    .cards-item
+        &__hidden-description
+            font-size: 11px
+    .third-section
+        &__left-wrapper
+            width: 60%
+        &__text-box
+            top: 115px
+            left: 45px
+        &__text
+            width: 75%
+            font-size: 12px
+    .fourth-section
+        &__title
+            font-size: 24px
+        &__text
+            font-size: 16px
+        &__button
+            padding: 10px
+    .product-card
+        &__container
+            min-height: 500px
+        &__text-box
+            margin: 25px 40px 0 40px
+        &__name
+            // font-size: 20px
+        &__price
+            font-size: 16px
+            span
+                font-size: 12px
+        &__description
+            width: 85%
+            font-size: 12px
+            margin-bottom: 15px
+        &__chose-volume
+            label
+                font-size: 12px
+        &__buttons
+            button
+                font-size: 10px
+                padding: 7px
+            &--orange
+                margin-right: 10px
+    .spoiler_title
+        padding: 15px 0
+    .plus-minus-toggle
+        left: -29px
+    .catalog-main-section
+        min-height: 550px
+        &__nav-container
+            margin-bottom: 25px
+        &__img-box
+            margin-top: 25px
+        &__img
+            width: 70%
+    .categories-section
+        margin-top: 10px
+        &__title
+            font-size: 26px
+            margin-bottom: 25px
+        &__button
+            font-size: 22px
+        &__selected-category-box
+            margin-bottom: 20px
+            p
+                margin: 0 15px
+                font-size: 20px
+        &__products-item
+            margin-bottom: 10px
+            img
+                margin-bottom: 10px
+            p
+                font-size: 16px
+    .footer
+        &__container
+            height: 245px
+        &__logo
+            h5
+                font-size: 25px
+        &__logo-line
+            width: 140px
+        &__contacts
+            p
+                font-size: 16px
+            a
+                font-size: 16px
+        &__socials
+            p
+                font-size: 16px
+        .icons-box
+            &__item
+                img
+                    width: 32px
+    .right-wrapper
+        &__img
+            // height: 70vh
+    .sign-up-section
+        &__left-wrapper
+            padding: 3px 0 3px 0
+            // height: 70vh
+            p
+                margin-bottom: 5px
+                font-size: 24px
+                span
+                    margin-bottom: 5px
+            input
+                margin-bottom: 16px
+            button
+                margin-bottom: 16px
+                padding: 7px 30px 7px 30px
+    .another-products
+        &__container
+            min-height: 520px
+        &__text-box
+            margin-bottom: 30px
+    .slidecontainer
+        width: 660px
+    .slick-slide
+        img
+            width: 220px
+        p
+            font-size: 18px
+    .products-container
+        span
+            font-size: 16px
+        ion-icon
+            font-size: 20px
+        .quantity
+            span
+                font-size: 16px
+    .price
+        font-size: 16px
+    .total
+        font-size: 16px
+    .product-name
+        width: fit-content
+    .group-and-fio
+        font-size: 24px
+
+@media (max-width: 767px)
+    .container
+        max-width: 540px
+    .footer
+        &__container
+            height: 175px
+        &__footer-background
+            height: 175px
+    .nav-menu
+        &__list-item
+            a
+                width: 60px
+                img
+                    width: 32px
+                p
+                    font-size: 12px
+    .main-section
+        min-height: 470px
+        &__header
+            h1
+                font-size: 24px
+        &__title
+            font-size: 24px
+            &-line
+                margin-bottom: 25px
+        &__text
+            font-size: 12px
+            width: 60%
+        &__search-form-container
+            button
+                img
+                    width: 20px
+            input
+                font-size: 12px
+                padding-left: 15px
+    .second-section
+        min-height: 440px
+        margin-bottom: 0px
+        &__text
+            height: 120px
+            p
+                font-size: 16px
+        &__cards-item
+            p
+                font-size: 12px
+    .cards-item
+        &__hidden-description
+            font-size: 8px
+            padding: 10px 10px 0 10px
+    .third-section
+        &__text-box
+            top: 30px
+    .right-wrapper
+        &__img
+            height: 328px
+    .sign-up-section
+        &__left-wrapper
+            height: 328px
+            p
+                font-size: 12px
+                span
+                    font-size: 16px
+            input
+                font-size: 12px
+                padding: 5px 0 5px 10px
+            button
+                font-size: 12px
+                padding: 7px 20px 7px 20px
+                margin-bottom: 10px
+    .product-card
+        &__text-box
+            margin: 20px 30px 0 30px
+        &__name
+            font-size: 16px
+        &__volume
+            font-size: 10px
+        &__price
+            font-size: 12px
+        &__buttons
+            button
+                font-size: 8px
+                padding: 5px
+            &--orange
+                margin-right: 1px
+    .spoiler_title
+        font-size: 12px
+        padding: 10px 0
+    .plus-minus-toggle:before,
+    .plus-minus-toggle:after
+        width: 12px
+    .plus-minus-toggle
+        left: -20px
+    .spoiler_content
+        p
+            font-size: 12px
+    .spoiler_wrap.active .spoiler_content
+        padding-bottom: 5px
+    .another-products
+        &__text-box
+            font-size: 18px
+            height: 75px
+            line-height: 75px
+    .another-products
+        &__container
+            min-height: 490px
+    .slidecontainer
+        width: 440px
+    .slick-slide
+        img
+            width: 220px
+        p
+            font-size: 16px
+    .catalog-main-section
+        min-height: 450px
+    .categories-section
+        &__title
+            font-size: 20px
+        &__button
+            font-size: 16px
+        &__selected-category-box
+            p
+                font-size: 16px
+                margin: 0
+        &__products-item
+            p
+                font-size: 12px
+    .products-section
+        min-height: 250px
+        &__title
+            font-size: 24px
+        &__number
+            font-size: 20px
+        &__number-in-wish
+            font-size: 20px
+        &__total
+            font-size: 20px
+    .product
+        img
+            width: 25%
+    .group-and-fio
+        font-size: 16px
+
+@media (max-width: 575px)
+    .container
+        width: 100%
+    .main-section
+        min-height: 335px
+        margin-bottom: 5px
+        &__title
+            font-size: 16px
+        &__text
+            font-size: 8px
+        &__text-box
+            top: 18px
+            left: 21px
+        &__search-form-container
+            input
+                font-size: 10px
+                padding-left: 10px
+            button
+                display: flex
+                align-items: center
+                justify-content: center
+                // padding: 5px 0 5px 0
+                img
+                    width: 15px
+    .nav-menu
+        &__list-item
+            a
+                width: 45px
+                img
+                    width: 28px
+                p
+                    font-size: 9px
+    .second-section
+        min-height: 335px
+        &__text
+            p
+                font-size: 12px
+                margin: 0 50px 0 50px
+        &__cards-item
+            p
+                font-size: 8px
+            img
+                margin-bottom: 10px
+        .cards-item
+            &__hidden-description
+                height: 70px
+                padding: 3px
+                font-size: 5px
+    .third-section
+        min-height: 300px
+        &__left-wrapper
+            display: none
+        &__right-wrapper
+            width: 100%
+            height: 275px
+        &__title
+            font-size: 24px
+        &__text
+            font-size: 10px
+        &__text-box
+            top: 20px
+            left: 33px
+    .fourth-section
+        min-height: 170px
+        &__text-box
+            height: 170px
+        &__title
+            font-size: 16px
+            margin-bottom: 10px
+        &__text
+            font-size: 12px
+            margin: 0 50px 10px 50px
+        &__button
+            font-size: 10px
+            padding: 7px
+    .product-card
+        &__container
+            display: flex
+            flex-direction: column
+        &__right-wrapper
+            width: 100%
+        &__left-wrapper
+            width: 100%
+    .another-products
+        &__text-box
+            font-size: 12px
+            height: 60px
+            line-height: 60px
+        &__container
+            min-height: 490px
+    .slidecontainer
+        width: 200px
+    .slick-slide
+        img
+            width: 200px
+        p
+            font-size: 14px
+    .slick-prev
+        left: -15px
+    .slick-next
+        right: -15px
+    .catalog-main-section
+        &__nav-container
+            margin-bottom: 10px
+        &__img-box
+            margin-top: 10px
+        &__img
+            width: 100%
+    .footer
+        &__container
+            flex-direction: column
+            height: fit-content
+            padding: 7px 0 7px 0
+        &__footer-background
+            height: 240px
+        &__item
+            height: fit-content
+        &__logo
+            h5
+                font-size: 20px
+        &__logo-line
+            width: 140px
+        &__contacts
+            p
+                font-size: 12px
+                margin-bottom: 0
+            a
+                font-size: 12px
+        &__socials
+            p
+                font-size: 12px
+        .icons-box
+            &__item
+                img
+                    width: 24px
+    .sign-up-section
+        &__left-wrapper
+            width: 100%
+        &__right-wrapper
+            display: none
+    .catalog-main-section
+        min-height: 340px
+    .categories-section
+        &__title
+            font-size: 16px
+            margin-bottom: 10px
+        &__button
+            font-size: 8px
+            padding: 7px 0
+        &__selected-category-box
+            margin-left: 7px
+            margin-bottom: 10px
+            flex-direction: column
+            p
+                font-size: 12px
+        &__products-item
+            width: 99%
+            img
+                width: 70%
+    .products-section
+        &__title
+            font-size: 16px
+        &__number
+            font-size: 12px
+            margin-right: 15px
+        &__number-in-wish
+            font-size: 12px
+            margin-right: 15px
+        &__total
+            font-size: 12px
+    .products-section
+        min-height: 300px
+    .product
+        flex-direction: column
+        justify-content: center
+        // align-items: center
+    .group-and-fio
+        font-size: 12px
